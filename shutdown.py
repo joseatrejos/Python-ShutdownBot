@@ -1,6 +1,6 @@
 import time, os
 
-timeout = 60*50   # 50 minutes in seconds
+timeout = 60*25   # 25 minutes in seconds
 timeout_start = time.time()
 shutdown = False
 
@@ -12,8 +12,9 @@ while time.time() < timeout_start + timeout:
     # Print the remaining time to shut down
     print("I'm still " + str( (timeout_start + timeout) - (time.time() + 5) ) +
     " seconds away from shutting down.")
+
     # Wait for 10 seconds
     time.sleep(10)
-    
-if(shutdown == true):
+
+if(shutdown == True):
     os.system('shutdown -s')
